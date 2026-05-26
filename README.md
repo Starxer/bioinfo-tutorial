@@ -48,10 +48,6 @@ git clone https://github.com/Starxer/bioinfo-tutorial.git
 
 VS Code、Typora、Notion 导入均可阅读。图片和链接全部本地化，无需联网。
 
-### 方式三：直接看 PDF
-
-[Releases](https://github.com/Starxer/bioinfo-tutorial/releases) 提供打包好的 PDF 版本（带中文字体、可搜索）。
-
 ---
 
 ## 🗺️ 推荐学习路线
@@ -76,21 +72,6 @@ VS Code、Typora、Notion 导入均可阅读。图片和链接全部本地化，
 
 ---
 
-## 🔧 本地 PDF 生成
-
-```bash
-# 安装依赖
-sudo apt install pandoc texlive-xetex librsvg2-bin
-
-# 生成 PDF
-for f in 0{0,1,2,3,4,5}-*.md; do
-  pandoc "$f" -o "${f%.md}.pdf" \
-    --pdf-engine=xelatex \
-    -V mainfont="Noto Sans CJK SC" \
-    -V geometry:margin=2cm
-done
-```
-
 ---
 
 ## 🤝 反馈与贡献
@@ -101,23 +82,9 @@ done
 
 ## 🤖 AIGC 声明
 
-本教程的编写过程中使用了以下 AI 工具辅助：
+本教程由 **Hermes Agent** 调用 **DeepSeek V4 Flash** 语言模型辅助编写，配图经 **MiniMax mmx** 生成与验证。所有内容均经人工审核、修正和确认。
 
-| 类别 | 工具 | 用途 |
-|------|------|------|
-| 写作平台 | **Hermes Agent**（本机部署） | AI 助手调度、指令执行 |
-| 语言模型 | **DeepSeek V4 Flash** | 内容撰写、代码生成、Markdown 排版 |
-| 图像生成 | **MiniMax mmx** | 配图生成与视觉验证 |
-| 图像验证 | **MiniMax mmx (Vision)** | 配图质量评估 |
-| 知识管理 | **OpenViking**（本地知识库） | 教程上下文管理与检索 |
-
-**使用原则：**
-- AI 生成的所有内容均经人工审核、修正和确认
-- 代码示例经过实际运行验证
-- 配图经过多轮迭代和视觉评估（评分 ≥ 8/10）
-- 部分示意图的原始素材来源于 Metaso 搜索、runoob.com 等公开资源，版权归原作者所有
-
-> 本教程旨在提供准确、可实操的生信学习内容。如发现任何由 AI 生成引入的错误，欢迎提 Issue 指正。
+> 如发现由 AI 引入的错误，欢迎提 Issue 指正。
 
 ---
 
