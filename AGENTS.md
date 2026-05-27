@@ -54,3 +54,18 @@ GitHub: `Starxer/bioinfo-tutorial`
 ## Obsidian 集成
 
 本仓库位于 Obsidian vault 内，Markdown 文件支持双向链接和知识图谱。
+
+## 练习服务器
+
+教程配套练习环境，供读者在线操作：
+
+| 项目 | 说明 |
+|------|------|
+| 地址 | `learner@starxer.cn -p 2222` |
+| 环境 | Docker 容器（Ubuntu 24.04），4 核 / 16 GB |
+| 预装 | conda 26.5.0、uv 0.11.16、sudo |
+| 共享目录 | 宿主机 `~/workspace-lyf/bioinfo-lab/shared/` → 容器 `/home/learner/shared/` |
+| 数据 | shared/ 内含家蚕参考基因组 GCF_014905235.1 (445MB) |
+| 密码 | **不写入教程**，联系管理员获取 |
+
+容器搭建：`~/workspace-lyf/bioinfo-lab/`（Dockerfile + docker-compose + 反向隧道脚本）
